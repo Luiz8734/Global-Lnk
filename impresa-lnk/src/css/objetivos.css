@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+}
+
+/* Fundo com gradiente */
+body {
+  background: linear-gradient(135deg, #0047AB, #00C2FF);
+  color: #e0e0e0;
+  min-height: 100vh;
+}
+
+/* Cabeçalho */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: linear-gradient(90deg, #0a2f66, #007bff);
+  z-index: 999;
+}
+
+.logo {
+  max-width: 130px;
+  margin-right: 40px;
+  border: 2px solid #ffffff;
+  border-radius: 50px;
+}
+
+.nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.nav li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  padding: 12px 16px;
+  border-radius: 6px;
+}
+
+.nav li a:hover {
+  color: #FFB74D;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+section {
+  width: 100%;
+  min-height: 100vh;
+  padding: 150px 40px 60px;
+  background: transparent;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  box-sizing: border-box;
+}
+
+.conteiner {
+  max-width: 600px;
+  width: 100%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 25px;
+  background: #FFA726;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.conteiner h1 {
+  font-size: 2.2em;
+  color: #fff;
+}
+
+.conteiner p {
+  font-size: 1em;
+  line-height: 1.5em;
+  color: #fff;
+}
+
+.placa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+.placa img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  border: 2px solid #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+  display: block;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    padding: 10px 20px;
+    align-items: center;
+  }
+
+  .logo {
+    margin-right: 0;
+    margin-bottom: 12px;
+    max-width: 90px;
+  }
+
+  .nav ul {
+    gap: 16px;
+  }
+
+  section {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    padding: 120px 10px 40px;
+  }
+
+  .conteiner {
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+    padding: 18px;
+  }
+
+  .placa {
+    max-width: 100%;
+  }
+
+  .placa img {
+    max-width: 100%;
+  }
+}

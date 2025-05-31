@@ -3,9 +3,9 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-  }
-  
-  header {
+}
+
+header {
     position: fixed;
     top: 0;
     left: 0;
@@ -13,36 +13,51 @@
     padding: 10px 80px;
     display: flex;
     align-items: center;
-    justify-content: space-between ;
+    justify-content: center;
     background: #0855ad;
     z-index: 999;
-  }
-  
-  header .logo {
+}
+
+header .logo {
     max-width: 130px;
-  }
-  
-  header .nav ul {
+}
+
+header .nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+header .nav ul {
     display: flex;
     list-style: none;
-  }
-  
-  header .nav li a {
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+header .nav li {
+    display: flex;
+    align-items: center;
+}
+
+header .nav li a {
     color: #ffffff;
     text-decoration: none;
     font-size: 13px;
     font-weight: 500;
-    margin-left: 40px;
     transition: color 0.3s ease;
-    
-  
-  }
-  
-  header .nav li a:hover {
+    padding: 12px 16px;
+    margin-left: 0;
+}
+
+header .nav li a:hover {
     color: #00b4d8;
-  }
-  
-  section {
+}
+
+section {
     position: relative;
     width: 100%;
     min-height: 100vh;
@@ -55,10 +70,10 @@
     gap: 60px;
     overflow: hidden;
     z-index: 1;
-  }
-  
-  /* Círculo menor no canto superior esquerdo */
-  .circulo-esquerdo {
+}
+
+/* Círculo menor no canto superior esquerdo */
+.circulo-esquerdo {
     position: absolute;
     top: 90px;
     left: 40px;
@@ -71,15 +86,15 @@
     justify-content: center;
     z-index: 0;
     margin-top: 100px;
-  }
-  
-  .circulo-esquerdo img {
+}
+
+.circulo-esquerdo img {
     border-radius: 100%;
     width: 100%;
     height: 100%;
-  }
-  
-  .resgate {
+}
+
+.resgate {
     margin-top: 40px;
     display: flex;
     justify-content: center;
@@ -92,8 +107,8 @@
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
 }
-  
-  .conteiner {
+
+.conteiner {
     max-width: 600px;
     color: #e0e0e0;
     display: flex;
@@ -102,19 +117,19 @@
     text-align: left;
     gap: 25px;
     z-index: 1;
-  }
-  
-  .conteiner h1 {
+}
+
+.conteiner h1 {
     font-size: 2rem;
     color: #ffffff;
-  }
-  
-  .conteiner h3 {
+}
+
+.conteiner h3 {
     font-size: 1.4em;
     color: #a9d6e5;
-  }
-  
-  .conteiner p {
+}
+
+.conteiner p {
     font-size: 1em;
     line-height: 1.5em;
-  }
+}

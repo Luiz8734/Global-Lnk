@@ -1,124 +1,128 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px 80px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between ;
-    background: #0855ad;
-    z-index: 999;
-  }
-  
-  header .logo {
-    max-width: 130px;
-  }
-  
-  header .nav ul {
-    display: flex;
-    list-style: none;
-  }
-  
-  header .nav li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 500;
-    margin-left: 40px;
-    transition: color 0.3s ease;
-    
-  
-  }
-  
-  header .nav li a:hover {
-    color: #00b4d8;
-  }
-  
-  section {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    padding: 150px 40px 60px;
-    background: #002b5b;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 60px;
-    overflow: hidden;
-    z-index: 1;
-  }
-  
-  .prototipo {
-    position: absolute;
-    bottom: 60px;
-    right: 40px;
-    width: 400px;
-    height: 400px;
-    background-color: #c0c0c000;
-    clip-path: circle(50% at center);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 0;
-  }
-  
-  .prototipo img {
-    width: 80%;
-    height: 80%;
-  }
-  
-  .conteiner {
-    max-width: 600px;
-    color: #e0e0e0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    gap: 25px;
-    z-index: 1;
-  }
-  
-  .conteiner h1 {
-    font-size: 2.5rem;
-    color: #ffffff;
-  }
-  
-  .conteiner h3 {
-    font-size: 1.4em;
-    color: #a9d6e5;
-  }
-  
-  .imgm:hover{
-    transform: scale(1.2);
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
 
-  .conteiner p {
-    font-size: 1em;
-    line-height: 1.5em;
-  }
-  .placa {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-    width: 100%;
+body {
+  background: #002b5b;
+  color: #e0e0e0;
+  min-height: 100vh;
+}
+
+header {
+  width: 100%;
+  padding: 10px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centraliza todo o conteúdo do header */
+  background: #0855ad;
+  z-index: 999;
+}
+
+.logo {
+  max-width: 130px;
+  margin-right: 40px;
+}
+
+.nav {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* Centraliza o nav dentro do header */
+}
+
+.nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 32px;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.nav li {
+  display: flex;
+  align-items: center;
+}
+
+.nav li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  padding: 12px 16px;
+}
+
+.nav li a:hover {
+  color: #00b4d8;
+}
+
+section {
+  width: 100%;
+  min-height: 100vh;
+  padding: 160px 40px 60px;
+  background: #002b5b;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  box-sizing: border-box;
+}
+
+.conteiner {
+  max-width: 600px;
+  color: #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 25px;
+  z-index: 1;
+}
+
+.conteiner h1 {
+  font-size: 2.2em;
+  color: #ffffff;
+}
+
+.conteiner p {
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+.placa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 400px;
+  width: 100%;
 }
 
 .placa img {
-    width: 300px;
-    border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+  object-fit: cover;
+  display: block;
 }
 
-.placa img:hover {
-    transform: scale(1.05);
+@media (max-width: 900px) {
+  section {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    padding: 120px 10px 40px;
+  }
+  .conteiner {
+    align-items: center;
+    text-align: center;
+  }
+  .placa {
+    max-width: 100%;
+  }
 }

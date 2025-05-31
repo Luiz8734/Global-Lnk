@@ -19,7 +19,7 @@ header {
   padding: 10px 80px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   background: #0855ad;
   z-index: 999;
 }
@@ -28,9 +28,25 @@ header .logo {
   max-width: 130px;
 }
 
+header .nav {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* Centraliza o nav dentro do header */
+}
+
 header .nav ul {
   display: flex;
   list-style: none;
+  gap: 40px; /* Espaço entre os itens do menu */
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+header .nav li {
+  display: flex;
+  align-items: center;
 }
 
 header .nav li a {
@@ -38,8 +54,9 @@ header .nav li a {
   text-decoration: none;
   font-size: 13px;
   font-weight: 500;
-  margin-left: 40px;
   transition: color 0.3s ease;
+  padding: 12px 16px;
+  margin-left: 0;
 }
 
 header .nav li a:hover {
@@ -106,5 +123,4 @@ section {
   z-index: 1;
   border-radius: 10px;
   top: 50%;
-
 }

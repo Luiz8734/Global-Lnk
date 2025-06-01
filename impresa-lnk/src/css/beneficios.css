@@ -160,3 +160,14 @@ section {
     border-radius: 12px;
   }
 }
+
+#quiz-btn{
+    border: 2px solid #FFA726;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+#quiz-btn:hover{
+    background-color: #FFA726;
+    color: white;
+}

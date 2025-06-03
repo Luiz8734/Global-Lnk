@@ -147,7 +147,7 @@ section {
   object-fit: cover;
   display: block;
 }
-
+/* //dd */
 @media (min-width: 901px) {
   .placa {
       max-width: 400px;
@@ -217,5 +217,6 @@ section {
       width: 90%;
       height: auto;
       margin:0px auto;
-  }
+  
+    }
 }

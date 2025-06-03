@@ -189,14 +189,14 @@ img {
   border: 2px solid #ffffff;
 }
 
-/* Responsividade */
+/* Responsividadse */
 @media (max-width: 900px) {
   header {
     flex-direction: column;
     padding: 10px 20px;
     align-items: center;
   }
-
+/* //sdd */
   .menu-toggle {
     display: block;
   }

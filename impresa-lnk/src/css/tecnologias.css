@@ -224,7 +224,7 @@ img {
   .imagem-inferior-esquerda,
   .imagem-inferior-superior {
     position: static !important;
-    width: 90% !important;
+    width: 90%  !important;
     height: auto !important;
     margin: 10px auto;
     border-radius: 12px !important;

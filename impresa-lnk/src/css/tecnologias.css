@@ -7,7 +7,7 @@
 
 body {
   min-height: 100vh;
-  background: linear-gradient(135deg, #0047AB, #00C2FF); /* gradiente padrão */
+  background: linear-gradient(135deg, #0047AB, #00C2FF);
   color: #e0e0e0;
 }
 
@@ -20,7 +20,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(90deg, #0a2f66, #007bff); /* gradiente padrão */
+  background: linear-gradient(90deg, #0a2f66, #007bff);
   z-index: 999;
   color: #ffffff;
 }
@@ -90,7 +90,8 @@ section {
   border: 2px solid #ffffff;
   border-radius: 24px;
   background: rgba(10, 47, 102, 0.25);
-  padding: 60px 20px;background-color: #FFA726;
+  padding: 60px 20px;
+  background-color: #FFA726;
 }
 
 .conteiner h1 {
@@ -138,8 +139,9 @@ img {
   height: 300px; 
   z-index: 1;
   border-radius: 10px;
-  /* borda já está no img */
   top: 50%;
+  border: 2px solid #ffffff;
+  object-fit: cover;
 }
 .imagem-direita-superior {
   position: absolute;
@@ -149,6 +151,8 @@ img {
   height: 300px;
   z-index: 1;
   border-radius: 10px;
+  border: 2px solid #ffffff;
+  object-fit: cover;
 }
 .imagem-inferior-esquerda {
   position: absolute;
@@ -159,6 +163,8 @@ img {
   z-index: 1;
   border-radius: 10px;
   top: 50%;
+  border: 2px solid #ffffff;
+  object-fit: cover;
 }
 .imagem-inferior-superior {
   position: absolute;
@@ -168,6 +174,8 @@ img {
   height: 300px;
   z-index: 1;
   border-radius: 10px;
+  border: 2px solid #ffffff;
+  object-fit: cover;
 }
 
 /* Responsivo */
@@ -182,7 +190,13 @@ img {
   }
 
   .nav ul {
-    gap: 18px;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
   }
 
   section {
@@ -203,14 +217,30 @@ img {
     max-width: 100%;
     height: auto;
   }
-}
-#quiz-btn{
-    border: 2px solid #FFA726;
-    padding: 10px;
-    border-radius: 15px;
+
+  /* Correção do alinhamento das imagens no celular */
+  .imagem-inferior-direita,
+  .imagem-direita-superior,
+  .imagem-inferior-esquerda,
+  .imagem-inferior-superior {
+    position: static !important;
+    width: 90%  !important;
+    height: auto !important;
+    margin: 10px auto;
+    border-radius: 12px !important;
+    display: block;
+    border: 2px solid #ffffff !important;
+    object-fit: cover !important;
+  }
 }
 
-#quiz-btn:hover{
-    background-color: #FFA726;
-    color: white;
+#quiz-btn {
+  border: 2px solid #FFA726;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+#quiz-btn:hover {
+  background-color: #FFA726;
+  color: white;
 }

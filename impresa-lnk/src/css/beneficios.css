@@ -2,13 +2,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
 }
 
 body {
   min-height: 100vh;
   background: linear-gradient(135deg, #0047AB, #00C2FF);
   color: #e0e0e0;
+  overflow-x: hidden;
 }
 
 header {
@@ -19,7 +20,7 @@ header {
   padding: 10px 80px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   background: linear-gradient(90deg, #0a2f66, #007bff);
   z-index: 999;
 }
@@ -29,6 +30,16 @@ header {
   margin-right: 40px;
   border: 2px solid #ffffff;
   border-radius: 50px;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  z-index: 1000;
 }
 
 .nav {
@@ -59,7 +70,21 @@ header {
 
 .nav li a:hover {
   color: #FFB74D;
-  background: rgba(255,255,255,0.07);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+#quiz-btn {
+  border: 2px solid #FFA726;
+  padding: 10px;
+  border-radius: 15px;
+  cursor: pointer;
+  background: transparent;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#quiz-btn:hover {
+  background-color: #FFA726;
+  color: white;
 }
 
 section {
@@ -74,7 +99,7 @@ section {
   gap: 40px;
   box-sizing: border-box;
 }
-
+/* ssss */
 .conteiner {
   max-width: 700px;
   width: 100%;
@@ -87,8 +112,11 @@ section {
   background-color: #FFA726;
   border-radius: 12px;
   padding: 32px 18px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   margin-bottom: 24px;
+  border: 2px solid #ffffff;
+  position: relative;
+  top: 20px;
 }
 
 .conteiner h1 {
@@ -114,7 +142,7 @@ section {
   width: 620px;
   border-radius: 16px;
   border: 2px solid #fff;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   object-fit: cover;
   display: block;
 }
@@ -122,16 +150,40 @@ section {
 /* Responsivo */
 @media (max-width: 900px) {
   header {
+    flex-direction: column;
     padding: 10px 20px;
+    align-items: center;
   }
 
-  .logo {
-    margin-right: 16px;
-    max-width: 90px;
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #0a2f66;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    display: none;
+  }
+
+  .nav.active {
+    display: flex;
   }
 
   .nav ul {
-    gap: 18px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .logo {
+    margin-right: 0;
+    margin-bottom: 12px;
+    max-width: 90px;
   }
 
   section {
@@ -159,15 +211,4 @@ section {
     max-width: 100%;
     border-radius: 12px;
   }
-}
-
-#quiz-btn{
-    border: 2px solid #FFA726;
-    padding: 10px;
-    border-radius: 15px;
-}
-
-#quiz-btn:hover{
-    background-color: #FFA726;
-    color: white;
 }

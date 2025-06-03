@@ -70,10 +70,10 @@ section {
   padding: 150px 40px 60px;
   background: transparent;
   display: flex;
-  flex-direction: row;
+  flex-direction: column; /* Alterado para coluna */
   align-items: center;
-  justify-content: center;
-  gap: 60px;
+  justify-content: flex-start;
+  gap: 40px;
   box-sizing: border-box;
 }
 
@@ -107,7 +107,6 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 400px;
   width: 100%;
 }
 
@@ -153,22 +152,18 @@ section {
     padding: 18px;
   }
 
-  .placa {
-    max-width: 100%;
-  }
-
   .placa img {
     max-width: 100%;
   }
 }
 
-#quiz-btn{
-    border: 2px solid #FFA726;
-    padding: 10px;
-    border-radius: 15px;
+#quiz-btn {
+  border: 2px solid #FFA726;
+  padding: 10px;
+  border-radius: 15px;
 }
-
-#quiz-btn:hover{
-    background-color: #FFA726;
-    color: white;
+/* sss */
+#quiz-btn:hover {
+  background-color: #FFA726;
+  color: white;
 }

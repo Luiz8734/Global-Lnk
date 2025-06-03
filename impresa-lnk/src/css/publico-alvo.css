@@ -2,14 +2,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
 }
 
-/* Fundo com gradiente */
 body {
+  background: linear-gradient(135deg, rgb(0, 71, 171), rgb(0, 194, 255));
+  color: rgb(224, 224, 224);
   min-height: 100vh;
-  background: linear-gradient(135deg, #0047AB, #00C2FF);
-  color: #e0e0e0;
+  overflow-x: hidden;
 }
 
 /* Cabeçalho */
@@ -21,8 +21,8 @@ header {
   padding: 10px 80px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  background: linear-gradient(90deg, #0a2f66, #007bff);
+  justify-content: space-between;
+  background: linear-gradient(90deg, rgb(10, 47, 102), rgb(0, 123, 255));
   z-index: 999;
   color: #ffffff;
 }
@@ -34,23 +34,33 @@ header {
   border-radius: 50px;
 }
 
-header .nav {
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.nav {
   flex: 1;
   display: flex;
   justify-content: center;
 }
 
-header .nav ul {
+.nav ul {
   display: flex;
   list-style: none;
-  gap: 40px;
+  gap: 32px;
   justify-content: center;
   align-items: center;
   padding: 0;
   margin: 0;
 }
 
-header .nav li a {
+.nav li a {
   color: #ffffff;
   text-decoration: none;
   font-size: 15px;
@@ -60,11 +70,26 @@ header .nav li a {
   border-radius: 6px;
 }
 
-header .nav li a:hover {
+.nav li a:hover {
   color: #FFB74D;
-  background: rgba(255,255,255,0.07);
+  background: rgba(255, 255, 255, 0.07);
 }
 
+#quiz-btn {
+  border: 2px solid #FFA726;
+  padding: 10px;
+  border-radius: 15px;
+  cursor: pointer;
+  background: transparent;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#quiz-btn:hover {
+  background-color: #FFA726;
+  color: white;
+}
+
+/* Seção principal */
 section {
   position: relative;
   width: 100%;
@@ -79,7 +104,7 @@ section {
   z-index: 1;
 }
 
-/* Caixa de texto laranja */
+/* Caixa de texto */
 .texto {
   background-color: #FFA726;
   color: #fff;
@@ -87,8 +112,11 @@ section {
   border-radius: 16px;
   max-width: 650px;
   margin-bottom: 32px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+  margin-top: 50px; 
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.10);
+  border: 2px solid #ffffff;
 }
+
 
 .texto h1, .texto h2 {
   color: #fff;
@@ -101,40 +129,48 @@ section {
   margin-bottom: 16px;
 }
 
+/* Bloco com fundo translúcido */
 .conteiner {
   max-width: 600px;
-  display: flex;
+  width: 100%;
+  color: #ffffff;
+  position: relative;
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
   gap: 25px;
-  z-index: 1;
-  color: #ffffff;
-  padding: 60px 20px;
+  background-color: #FFA726;
+  border-radius: 12px;
+  padding: 30px;
   border: 2px solid #ffffff;
-  border-radius: 24px;
-  background: rgba(10, 47, 102, 0.25);
+  box-shadow: 0 4px 12px rgba(255, 253, 253, 0.08);
+  top: auto;
+
+  
 }
 
 .conteiner h1 {
   font-size: 2.2em;
   color: #ffffff;
+  
 }
 
 .conteiner h3 {
   font-size: 1.4em;
-  color: #a9d6e5;
+  color: #e3f2fd;
+ 
 }
 
 .conteiner p {
   font-size: 1em;
   line-height: 1.5em;
+  color: #ffffff;
+  
 }
 
-/* Imagens responsivas e proporcionais */
+/* Imagens principais */
 img {
-  max-width: 900px;
-  width: 100%;
+  max-width: 100%;
   height: auto;
   display: block;
   margin: 0 auto;
@@ -142,6 +178,7 @@ img {
   border: 2px solid #ffffff;
 }
 
+/* Imagem menor */
 .pequena {
   max-width: 900px;
   width: 100%;
@@ -152,19 +189,43 @@ img {
   border: 2px solid #ffffff;
 }
 
-/* Responsivo */
+/* Responsividadse */
 @media (max-width: 900px) {
   header {
+    flex-direction: column;
     padding: 10px 20px;
+    align-items: center;
+  }
+/* //sdd */
+  .menu-toggle {
+    display: block;
   }
 
   .logo {
-    max-width: 130px;
-    margin-right: 40px;
+    margin-right: 0;
+    margin-bottom: 12px;
+    max-width: 90px;
   }
 
-  header .nav ul {
-    gap: 18px;
+  .nav {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #0a2f66;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    display: none;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 20px;
   }
 
   section {
@@ -178,7 +239,8 @@ img {
     max-width: 100%;
     align-items: center;
     text-align: center;
-    padding: 40px 10px;
+    padding: 24px;
+    
   }
 
   .texto {
@@ -191,15 +253,4 @@ img {
     max-width: 100%;
     height: auto;
   }
-}
-
-#quiz-btn{
-    border: 2px solid #FFA726;
-    padding: 10px;
-    border-radius: 15px;
-}
-
-#quiz-btn:hover{
-    background-color: #FFA726;
-    color: white;
 }

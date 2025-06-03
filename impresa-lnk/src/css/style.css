@@ -5,31 +5,42 @@
   font-family: 'Poppins', sans-serif;
 }
 
-body {
+html, body {
+  width: 100%;
+  overflow-x: hidden;
   min-height: 100vh;
   background: linear-gradient(135deg, #0047AB, #00C2FF);
   color: #e0e0e0;
 }
 
+/* HEADER */
 header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 10px 80px;
+  padding: 10px 40px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   background: linear-gradient(90deg, #0a2f66, #007bff);
   z-index: 999;
-  color: #ffffff;
 }
 
 .logo {
-  max-width: 130px;
-  margin-right: 40px;
+  max-width: 120px;
   border: 2px solid #ffffff;
   border-radius: 50px;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1000;
 }
 
 .nav {
@@ -41,11 +52,9 @@ header {
 .nav ul {
   display: flex;
   list-style: none;
-  gap: 40px;
+  gap: 32px;
   justify-content: center;
   align-items: center;
-  padding: 0;
-  margin: 0;
 }
 
 .nav li a {
@@ -63,6 +72,18 @@ header {
   background: rgba(255,255,255,0.07);
 }
 
+#quiz-btn {
+  border: 2px solid #FFA726;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+#quiz-btn:hover {
+  background-color: #FFA726;
+  color: white;
+}
+
+/* SEÇÃO PRINCIPAL */
 section {
   position: relative;
   width: 100%;
@@ -75,47 +96,7 @@ section {
   gap: 60px;
   overflow: hidden;
   z-index: 1;
-}
-
-.circulo-esquerdo {
-  position: absolute;
-  top: 90px;
-  left: 40px;
-  width: 300px;
-  height: 300px;
-  background-color: #f7f4f4;
-  clip-path: circle(50% at center);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 0;
-  margin-top: 100px;
-}
-
-.circulo-esquerdo img {
-  border-radius: 90%;
-  width: 90%;
-  height: 90%;
-}
-
-.circulo-direito {
-  position: absolute;
-  bottom: 60px;
-  right: 40px;
-  width: 300px;
-  height: 300px;
-  background-color: #f7f6f6;
-  clip-path: circle(50% at center);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 0;
-}
-
-.circulo-direito img {
-  border-radius: 90%;
-  width: 90%;
-  height: 90%;
+  flex-wrap: wrap;
 }
 
 .conteiner {
@@ -152,19 +133,71 @@ section {
   margin-bottom: 16px;
 }
 
-/* Responsivo */
+
+.circulo-esquerdo,
+.circulo-direito {
+  width: 300px;
+  height: 300px;
+
+  background-color: #f7f6f6;
+  clip-path: circle(50% at center);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+  padding: 10px;
+}
+
+.circulo-esquerdo {
+  position: absolute;
+  top: 160px;
+  left: 40px;
+  
+}
+
+.circulo-direito {
+  position: absolute;
+  bottom: 60px;
+  right: 40px;
+}
+
+.circulo-esquerdo img,
+.circulo-direito img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* RESPONSIVO */
 @media (max-width: 900px) {
   header {
     padding: 10px 20px;
   }
 
-  .logo {
-    margin-right: 16px;
-    max-width: 90px;
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #0a2f66;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+  }
+
+  .nav.active {
+    display: flex;
   }
 
   .nav ul {
-    gap: 18px;
+    flex-direction: column;
+    gap: 20px;
   }
 
   section {
@@ -175,39 +208,58 @@ section {
   }
 
   .conteiner {
-    max-width: 100%;
-    align-items: center;
-    text-align: center;
     padding: 24px;
+    text-align: center;
+    align-items: center;
     border-radius: 12px;
+    
   }
 
   .circulo-esquerdo,
   .circulo-direito {
     width: 180px;
     height: 180px;
-    margin-top: 40px;
+    position: relative;
+    margin: 10px 0;
+    padding: 5px;
+    margin-top: 10%;
   }
 
-  .circulo-esquerdo {
-    top: 30px;
-    left: 10px;
-  }
-
+  .circulo-esquerdo,
   .circulo-direito {
-    bottom: 20px;
-    right: 10px;
-    margin-top: 0;
+    
+    top: auto;
+    left: auto;
+    bottom: auto;
+    right: auto;
+  
+    
+  }
+
+  .circulo-esquerdo img,
+  .circulo-direito img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
   }
 }
 
-#quiz-btn{
-    border: 2px solid #FFA726;
-    padding: 10px;
-    border-radius: 15px;
-}
+@media (max-width: 500px) {
+  .conteiner {
+    padding: 16px;
+  }
 
-#quiz-btn:hover{
-    background-color: #FFA726;
-    color: white;
+  .conteiner h1 {
+    font-size: 1.6em;
+  }
+
+  .conteiner h3 {
+    font-size: 1.2em;
+  }
+
+  .conteiner p {
+    font-size: 0.95em;
+    line-height: 1.5;
+  }
 }

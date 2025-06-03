@@ -1,7 +1,10 @@
+/* =========================
+   VARIÁVEIS GLOBAIS
+   ========================= */
 :root {
   --font-primary: 'Poppins', 'Segoe UI', sans-serif;
 
-  /* /* Cores / */
+  /* Cores principais */
   --color-bg-start: #0047AB;
   --color-bg-end: #00C2FF;
   --color-text: #e0e0e0;
@@ -12,25 +15,33 @@
   --color-container-bg: #FFA726;
   --color-border: #ffffff;
 
-  /* / Bordas e outros */ 
+  /* Bordas e outros */
   --border-radius: 12px;
   --transition: 0.3s ease;
 }
+
+/* =========================
+   RESET E FONTE PADRÃO
+   ========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-family: var(--font-primary);
 }
 
-/* Fundo com gradiente */
+/* =========================
+   FUNDO DO BODY
+   ========================= */
 body {
-  background: linear-gradient(135deg, #0047AB, #00C2FF);
-  color: #e0e0e0;
+  background: linear-gradient(135deg, var(--color-bg-start), var(--color-bg-end));
+  color: var(--color-text);
   min-height: 100vh;
 }
 
-/* Cabeçalho */
+/* =========================
+   CABEÇALHO (HEADER)
+   ========================= */
 header {
   position: fixed;
   top: 0;
@@ -40,23 +51,28 @@ header {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  background: linear-gradient(90deg, #0a2f66, #007bff);
+  background: linear-gradient(90deg, var(--color-header-start), var(--color-header-end));
   z-index: 999;
 }
 
+/* Logo da empresa */
 .logo {
   max-width: 130px;
   margin-right: 40px;
-  border: 2px solid #ffffff;
+  border: 2px solid var(--color-border);
   border-radius: 50px;
 }
 
+/* =========================
+   NAVEGAÇÃO
+   ========================= */
 .nav {
   flex: 1;
   display: flex;
   justify-content: center;
 }
 
+/* Lista de links do menu */
 .nav ul {
   display: flex;
   list-style: none;
@@ -67,6 +83,7 @@ header {
   margin: 0;
 }
 
+/* Links do menu */
 .nav li a {
   color: #ffffff;
   text-decoration: none;
@@ -77,24 +94,31 @@ header {
   border-radius: 6px;
 }
 
+/* Efeito hover nos links */
 .nav li a:hover {
-  color: #FFB74D;
+  color: var(--color-hover);
   background: rgba(255, 255, 255, 0.07);
 }
 
+/* =========================
+   SEÇÃO PRINCIPAL
+   ========================= */
 section {
   width: 100%;
   min-height: 100vh;
   padding: 150px 40px 60px;
   background: transparent;
   display: flex;
-  flex-direction: column; /*coluna */
+  flex-direction: column; /* coluna */
   align-items: center;
   justify-content: flex-start;
   gap: 40px;
   box-sizing: border-box;
 }
 
+/* =========================
+   BLOCO DE CONTEÚDO (CONTEINER)
+   ========================= */
 .conteiner {
   max-width: 600px;
   width: 100%;
@@ -104,8 +128,8 @@ section {
   align-items: flex-start;
   text-align: left;
   gap: 25px;
-  background: #FFA726;
-  border-radius: 12px;
+  background: var(--color-container-bg);
+  border-radius: var(--border-radius);
   padding: 30px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
@@ -121,6 +145,9 @@ section {
   color: #fff;
 }
 
+/* =========================
+   IMAGEM DA PLACA
+   ========================= */
 .placa {
   display: flex;
   align-items: center;
@@ -131,14 +158,16 @@ section {
 .placa img {
   width: 100%;
   max-width: 400px;
-  border-radius: 12px;
-  border: 2px solid #ffffff;
+  border-radius: var(--border-radius);
+  border: 2px solid var(--color-border);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   object-fit: cover;
   display: block;
 }
 
-/* Responsivo */
+/* =========================
+   RESPONSIVIDADE
+   ========================= */
 @media (max-width: 900px) {
   header {
     flex-direction: column;
@@ -175,27 +204,34 @@ section {
   }
 }
 
+/* =========================
+   BOTÃO DO QUIZ
+   ========================= */
 #quiz-btn {
-  border: 2px solid #FFA726;
+  border: 2px solid var(--color-button);
   padding: 10px;
   border-radius: 15px;
 }
 
-
 #quiz-btn:hover {
-  background-color: #FFA726;
+  background-color: var(--color-button);
   color: white;
 }
 
+/* =========================
+   LINK ATIVO DO MENU
+   ========================= */
 nav ul li a.active {
   color: #FFD700; 
   font-weight: bold;
   border-bottom: 2px solid #FFD700;
 }
 
-/* Footer */
+/* =========================
+   RODAPÉ (FOOTER)
+   ========================= */
 footer {
-  background: linear-gradient(90deg, #0a2f66, #007bff);
+  background: linear-gradient(90deg, var(--color-header-start), var(--color-header-end));
   color: #fff;
   text-align: center;
   padding: 20px 10px;

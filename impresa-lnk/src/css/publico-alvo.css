@@ -1,3 +1,6 @@
+/* =========================
+   VARIÁVEIS GLOBAIS
+   ========================= */
 :root {
   --font-primary: 'Poppins', 'Segoe UI', sans-serif;
 
@@ -24,21 +27,29 @@
   --transition: 0.3s ease;
 }
 
+/* =========================
+   RESET E FONTE PADRÃO
+   ========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-family: var(--font-primary);
 }
 
+/* =========================
+   ESTILO DO BODY
+   ========================= */
 body {
-  background: linear-gradient(135deg, rgb(0, 71, 171), rgb(0, 194, 255));
-  color: rgb(224, 224, 224);
+  background: linear-gradient(135deg, var(--color-bg-start), var(--color-bg-end));
+  color: var(--color-text);
   min-height: 100vh;
   overflow-x: hidden;
 }
 
-/* Cabeçalho */
+/* =========================
+   CABEÇALHO (HEADER)
+   ========================= */
 header {
   position: fixed;
   top: 0;
@@ -48,34 +59,40 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(90deg, rgb(10, 47, 102), rgb(0, 123, 255));
+  background: linear-gradient(90deg, var(--color-header-start), var(--color-header-end));
   z-index: 999;
-  color: #ffffff;
+  color: var(--color-white);
 }
 
+/* Logo da empresa */
 .logo {
   max-width: 130px;
   margin-right: 40px;
-  border: 2px solid #ffffff;
+  border: 2px solid var(--color-white);
   border-radius: 50px;
 }
 
+/* Botão do menu (hamburguer) */
 .menu-toggle {
   display: none;
   font-size: 28px;
   background: none;
   border: none;
-  color: #ffffff;
+  color: var(--color-white);
   cursor: pointer;
   z-index: 1000;
 }
 
+/* =========================
+   NAVEGAÇÃO
+   ========================= */
 .nav {
   flex: 1;
   display: flex;
   justify-content: center;
 }
 
+/* Lista de links do menu */
 .nav ul {
   display: flex;
   list-style: none;
@@ -86,8 +103,9 @@ header {
   margin: 0;
 }
 
+/* Links do menu */
 .nav li a {
-  color: #ffffff;
+  color: var(--color-white);
   text-decoration: none;
   font-size: 15px;
   font-weight: 500;
@@ -96,13 +114,15 @@ header {
   border-radius: 6px;
 }
 
+/* Efeito hover nos links */
 .nav li a:hover {
-  color: #FFB74D;
+  color: var(--color-hover);
   background: rgba(255, 255, 255, 0.07);
 }
 
+/* Botão especial do quiz */
 #quiz-btn {
-  border: 2px solid #FFA726;
+  border: 2px solid var(--color-button);
   padding: 10px;
   border-radius: 15px;
   cursor: pointer;
@@ -110,12 +130,15 @@ header {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Hover do botão do quiz */
 #quiz-btn:hover {
-  background-color: #FFA726;
-  color: white;
+  background-color: var(--color-button);
+  color: var(--color-white);
 }
 
-/* Seção principal */
+/* =========================
+   SEÇÃO PRINCIPAL
+   ========================= */
 section {
   position: relative;
   width: 100%;
@@ -130,51 +153,55 @@ section {
   z-index: 1;
 }
 
-/* Caixa de texto */
+/* =========================
+   BLOCO DE TEXTO
+   ========================= */
 .texto {
-  background-color: #FFA726;
-  color: #fff;
+  background-color: var(--color-box-bg);
+  color: var(--color-white);
   padding: 40px;
-  border-radius: 16px;
+  border-radius: var(--border-radius-medium);
   max-width: 650px;
   margin-bottom: 32px;
   margin-top: 50px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.10);
-  border: 2px solid #ffffff;
+  box-shadow: 0 6px 18px var(--color-box-shadow);
+  border: 2px solid var(--color-white);
 }
 
 .texto h1, .texto h2 {
-  color: #fff;
+  color: var(--color-white);
   margin-bottom: 20px;
 }
 
 .texto p {
-  color: #fff;
+  color: var(--color-white);
   line-height: 1.7;
   margin-bottom: 16px;
 }
 
-/* Bloco com fundo  */
+/* =========================
+   BLOCO DE CONTEÚDO (CONTEINER)
+   ========================= */
 .conteiner {
   max-width: 600px;
   width: 100%;
-  color: #ffffff;
+  color: var(--color-white);
   position: relative;
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
   gap: 25px;
-  background-color: #FFA726;
-  border-radius: 12px;
+  background-color: var(--color-box-bg);
+  border-radius: var(--border-radius-small);
   padding: 30px;
-  border: 2px solid #ffffff;
-  box-shadow: 0 4px 12px rgba(255, 253, 253, 0.08);
+  border: 2px solid var(--color-white);
+  box-shadow: 0 4px 12px var(--color-box-shadow-light);
   top: auto;
 }
 
 .conteiner h1 {
   font-size: 2.2em;
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .conteiner h3 {
@@ -185,31 +212,35 @@ section {
 .conteiner p {
   font-size: 1em;
   line-height: 1.5em;
-  color: #ffffff;
+  color: var(--color-white);
 }
 
-/* Imagens  */
+/* =========================
+   IMAGENS
+   ========================= */
 img {
   max-width: 100%;
   height: auto;
   display: block;
   margin: 0 auto;
-  border-radius: 50px;
-  border: 2px solid #ffffff;
+  border-radius: var(--border-radius-large);
+  border: 2px solid var(--color-white);
 }
 
-/* Imagem */
+/* Imagem pequena */
 .pequena {
   max-width: 900px;
   width: 100%;
   height: auto;
   display: block;
   margin: 0 auto;
-  border-radius: 50px;
-  border: 2px solid #ffffff;
+  border-radius: var(--border-radius-large);
+  border: 2px solid var(--color-white);
 }
 
-/* Responsividade */
+/* =========================
+   RESPONSIVIDADE
+   ========================= */
 @media (max-width: 900px) {
   header {
     flex-direction: column;
@@ -232,7 +263,7 @@ img {
     top: 60px;
     left: 0;
     width: 100%;
-    background: #0a2f66;
+    background: var(--color-nav-bg);
     flex-direction: column;
     align-items: center;
     padding: 20px 0;
@@ -265,7 +296,7 @@ img {
   .texto {
     max-width: 100%;
     padding: 24px;
-    border-radius: 12px;
+    border-radius: var(--border-radius-small);
   }
 
   .pequena {
@@ -274,13 +305,18 @@ img {
   }
 }
 
+/* =========================
+   LINK ATIVO DO MENU
+   ========================= */
 nav ul li a.active {
   color: #FFD700; 
   font-weight: bold;
   border-bottom: 2px solid #FFD700;
 }
 
-/* Footer */
+/* =========================
+   RODAPÉ (FOOTER)
+   ========================= */
 footer {
   background: linear-gradient(90deg, var(--color-header-start), var(--color-header-end));
   color: var(--color-white);
@@ -290,6 +326,7 @@ footer {
   border-top: 2px solid var(--color-button);
   box-shadow: 0 -4px 8px var(--color-box-shadow-light);
   margin-top: 40px;
+  /* O rodapé fica sempre embaixo do conteúdo */
 }
 
 footer p {

@@ -1,7 +1,10 @@
+/* =========================
+   VARIÁVEIS GLOBAIS
+   ========================= */
 :root {
   --font-primary: 'Poppins', 'Segoe UI', sans-serif;
 
-  /* Cores principais /
+  /* Cores principais */
   --color-bg-start: #0047AB;
   --color-bg-end: #00C2FF;
   --color-text: #e0e0e0;
@@ -12,24 +15,34 @@
   --color-container-bg: #FFA726;
   --color-border: #ffffff;
 
-  / Outros */
+  /* Outros */
   --border-radius: 12px;
   --transition: 0.3s ease;
 }
+
+/* =========================
+   RESET E FONTE PADRÃO
+   ========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-family: var(--font-primary);
 }
 
+/* =========================
+   FUNDO DO BODY
+   ========================= */
 body {
   min-height: 100vh;
-  background: linear-gradient(135deg, #0047AB, #00C2FF);
-  color: #e0e0e0;
+  background: linear-gradient(135deg, var(--color-bg-start), var(--color-bg-end));
+  color: var(--color-text);
   overflow-x: hidden;
 }
 
+/* =========================
+   CABEÇALHO (HEADER)
+   ========================= */
 header {
   position: fixed;
   top: 0;
@@ -39,17 +52,19 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(90deg, #0a2f66, #007bff);
+  background: linear-gradient(90deg, var(--color-header-start), var(--color-header-end));
   z-index: 999;
 }
 
+/* Logo da empresa */
 .logo {
   max-width: 130px;
   margin-right: 40px;
-  border: 2px solid #ffffff;
+  border: 2px solid var(--color-border);
   border-radius: 50px;
 }
 
+/* Botão do menu (hamburguer) */
 .menu-toggle {
   display: none;
   font-size: 28px;
@@ -60,12 +75,16 @@ header {
   z-index: 1000;
 }
 
+/* =========================
+   NAVEGAÇÃO
+   ========================= */
 .nav {
   flex: 1;
   display: flex;
   justify-content: center;
 }
 
+/* Lista de links do menu */
 .nav ul {
   display: flex;
   list-style: none;
@@ -76,6 +95,7 @@ header {
   margin: 0;
 }
 
+/* Links do menu */
 .nav li a {
   color: #ffffff;
   text-decoration: none;
@@ -86,13 +106,17 @@ header {
   border-radius: 6px;
 }
 
+/* Efeito hover nos links */
 .nav li a:hover {
-  color: #FFB74D;
+  color: var(--color-hover);
   background: rgba(255, 255, 255, 0.07);
 }
 
+/* =========================
+   BOTÃO DO QUIZ
+   ========================= */
 #quiz-btn {
-  border: 2px solid #FFA726;
+  border: 2px solid var(--color-button);
   padding: 10px;
   border-radius: 15px;
   cursor: pointer;
@@ -101,10 +125,13 @@ header {
 }
 
 #quiz-btn:hover {
-  background-color: #FFA726;
+  background-color: var(--color-button);
   color: white;
 }
 
+/* =========================
+   SEÇÃO PRINCIPAL
+   ========================= */
 section {
   width: 100%;
   min-height: 100vh;
@@ -117,7 +144,10 @@ section {
   gap: 40px;
   box-sizing: border-box;
 }
-/* ssss */
+
+/* =========================
+   BLOCO DE CONTEÚDO (CONTEINER)
+   ========================= */
 .conteiner {
   max-width: 700px;
   width: 100%;
@@ -127,12 +157,12 @@ section {
   align-items: flex-start;
   text-align: left;
   gap: 24px;
-  background-color: #FFA726;
-  border-radius: 12px;
+  background-color: var(--color-container-bg);
+  border-radius: var(--border-radius);
   padding: 32px 18px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   margin-bottom: 24px;
-  border: 2px solid #ffffff;
+  border: 2px solid var(--color-border);
   position: relative;
   top: 20px;
 }
@@ -148,6 +178,9 @@ section {
   color: #fff;
 }
 
+/* =========================
+   IMAGEM DE RESGATE
+   ========================= */
 .resgate {
   display: flex;
   align-items: center;
@@ -165,7 +198,9 @@ section {
   display: block;
 }
 
-/* Responsivo */
+/* =========================
+   RESPONSIVIDADE
+   ========================= */
 @media (max-width: 900px) {
   header {
     flex-direction: column;
@@ -182,7 +217,7 @@ section {
     top: 60px;
     left: 0;
     width: 100%;
-    background: #0a2f66;
+    background: var(--color-header-start);
     flex-direction: column;
     align-items: center;
     padding: 20px 0;
@@ -230,8 +265,28 @@ section {
     border-radius: 12px;
   }
 }
+
+/* =========================
+   LINK ATIVO DO MENU
+   ========================= */
 nav ul li a.active {
-  color: #FFD700; /* por exemplo, amarelo */
+  color: #FFD700; 
   font-weight: bold;
   border-bottom: 2px solid #FFD700;
+}
+
+/* =========================
+   RODAPÉ (FOOTER)
+   ========================= */
+footer {
+  background: linear-gradient(90deg, var(--color-header-start), var(--color-header-end));
+  color: #fff;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 14px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
+  border-top: 2px solid #FFD700;
 }

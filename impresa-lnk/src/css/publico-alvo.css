@@ -254,3 +254,8 @@ img {
     height: auto;
   }
 }
+nav ul li a.active {
+  color: #FFD700; /* por exemplo, amarelo */
+  font-weight: bold;
+  border-bottom: 2px solid #FFD700;
+}

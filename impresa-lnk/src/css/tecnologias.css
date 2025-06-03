@@ -47,8 +47,6 @@
   --btn-border-radius: 15px;
   --btn-hover-bg: #FFA726;
   --btn-hover-color: white;
-
-  /* Outros */
   --gap-small: 20px;
 }
 
@@ -59,7 +57,7 @@
   box-sizing: border-box;
 }
 
-/* Garante altura total para html e body e layout flex vertical */
+/* Garante altura total  */
 html, body {
   height: 100%;
   font-family: var(--font-primary);
@@ -71,15 +69,15 @@ html, body {
   padding: 0;
 }
 
-/* Corpo flexível para empurrar footer */
+/*empurrar footer */
 body {
   flex: 1 0 auto;
 }
 
-/* Main ocupa espaço restante */
+
 main {
   flex: 1 0 auto;
-  padding-top: 80px; /* para não ficar coberto pelo header fixo */
+  padding-top: 80px; 
 }
 
 /* Header fixo */
@@ -142,7 +140,7 @@ header {
 }
 
 .nav ul li a.active {
-  color: #FFD700; /* amarelo */
+  color: #FFD700; 
   font-weight: bold;
   border-bottom: 2px solid #FFD700;
 }
@@ -159,7 +157,7 @@ header {
   color: var(--btn-hover-color);
 }
 
-/* Seção principal */
+/* principal */
 section {
   padding: var(--section-padding-desktop);
   display: flex;
@@ -179,7 +177,6 @@ section {
   border: var(--image-border);
 }
 
-/* Tipografia */
 .conteiner h1 {
   font-size: 2.2em;
 }
@@ -204,7 +201,7 @@ section {
   margin-bottom: 10px;
 }
 
-/* Imagens padrão */
+/* Imagens  */
 img {
   width: 100%;
   height: auto;
@@ -230,7 +227,7 @@ img {
 .imagem-inferior-direita {
   bottom: 20px;
   right: 20px;
-  top: 50%;
+  top: 80%;
 }
 
 .imagem-direita-superior {
@@ -241,11 +238,11 @@ img {
 .imagem-inferior-esquerda {
   bottom: 20px;
   left: 5%;
-  top: 50%;
+  top: 80%;
 }
 
 .imagem-inferior-superior {
-  top: 15%;
+  top:170px;
   left: 5%;
 }
 

@@ -1,3 +1,21 @@
+:root {
+  --font-primary: 'Poppins', 'Segoe UI', sans-serif;
+
+  /* Cores principais */
+  --color-bg-start: #0047AB;
+  --color-bg-end: #00C2FF;
+  --color-text: #e0e0e0;
+  --color-hover: #FFB74D;
+  --color-button: #FFA726;
+  --color-header-start: #0a2f66;
+  --color-header-end: #007bff;
+  --color-container-bg: #FFA726;
+  --color-border: #ffffff;
+
+  /* Outros */
+  --border-radius: 12px;
+  --transition: 0.3s ease;
+}
 * {
   margin: 0;
   padding: 0;
@@ -99,6 +117,7 @@ section {
   gap: 40px;
   box-sizing: border-box;
 }
+
 /* ssss */
 .conteiner {
   max-width: 700px;
@@ -212,8 +231,23 @@ section {
     border-radius: 12px;
   }
 }
+
 nav ul li a.active {
-  color: #FFD700; /* por exemplo, amarelo */
+  color: #FFD700; 
   font-weight: bold;
   border-bottom: 2px solid #FFD700;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(90deg, #0a2f66, #007bff);
+  color: #fff;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 14px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
+  border-top: 2px solid #FFD700;
 }

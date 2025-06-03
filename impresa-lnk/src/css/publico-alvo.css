@@ -1,3 +1,29 @@
+:root {
+  --font-primary: 'Poppins', 'Segoe UI', sans-serif;
+
+  /* Cores principais */
+  --color-bg-start: rgb(0, 71, 171);
+  --color-bg-end: rgb(0, 194, 255);
+  --color-text: rgb(224, 224, 224);
+  --color-white: #ffffff;
+  --color-hover: #FFB74D;
+  --color-button: #FFA726;
+  --color-header-start: rgb(10, 47, 102);
+  --color-header-end: rgb(0, 123, 255);
+  --color-box-bg: #FFA726;
+  --color-box-shadow: rgba(0, 0, 0, 0.10);
+  --color-box-shadow-light: rgba(255, 253, 253, 0.08);
+  --color-nav-bg: #0a2f66;
+
+  /* Bordas e outros */
+  --border-radius-large: 50px;
+  --border-radius-medium: 16px;
+  --border-radius-small: 12px;
+  --border-color: #ffffff;
+
+  --transition: 0.3s ease;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -112,11 +138,10 @@ section {
   border-radius: 16px;
   max-width: 650px;
   margin-bottom: 32px;
-  margin-top: 50px; 
+  margin-top: 50px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.10);
   border: 2px solid #ffffff;
 }
-
 
 .texto h1, .texto h2 {
   color: #fff;
@@ -129,7 +154,7 @@ section {
   margin-bottom: 16px;
 }
 
-/* Bloco com fundo translúcido */
+/* Bloco com fundo  */
 .conteiner {
   max-width: 600px;
   width: 100%;
@@ -145,30 +170,25 @@ section {
   border: 2px solid #ffffff;
   box-shadow: 0 4px 12px rgba(255, 253, 253, 0.08);
   top: auto;
-
-  
 }
 
 .conteiner h1 {
   font-size: 2.2em;
   color: #ffffff;
-  
 }
 
 .conteiner h3 {
   font-size: 1.4em;
   color: #e3f2fd;
- 
 }
 
 .conteiner p {
   font-size: 1em;
   line-height: 1.5em;
   color: #ffffff;
-  
 }
 
-/* Imagens principais */
+/* Imagens  */
 img {
   max-width: 100%;
   height: auto;
@@ -178,7 +198,7 @@ img {
   border: 2px solid #ffffff;
 }
 
-/* Imagem menor */
+/* Imagem */
 .pequena {
   max-width: 900px;
   width: 100%;
@@ -189,14 +209,14 @@ img {
   border: 2px solid #ffffff;
 }
 
-/* Responsividadse */
+/* Responsividade */
 @media (max-width: 900px) {
   header {
     flex-direction: column;
     padding: 10px 20px;
     align-items: center;
   }
-/* //sdd */
+
   .menu-toggle {
     display: block;
   }
@@ -240,7 +260,6 @@ img {
     align-items: center;
     text-align: center;
     padding: 24px;
-    
   }
 
   .texto {
@@ -254,8 +273,46 @@ img {
     height: auto;
   }
 }
+
 nav ul li a.active {
-  color: #FFD700; /* por exemplo, amarelo */
+  color: #FFD700; 
   font-weight: bold;
   border-bottom: 2px solid #FFD700;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(90deg, var(--color-header-start), var(--color-header-end));
+  color: var(--color-white);
+  text-align: center;
+  padding: 20px 40px;
+  font-size: 14px;
+  border-top: 2px solid var(--color-button);
+  box-shadow: 0 -4px 8px var(--color-box-shadow-light);
+  margin-top: 40px;
+}
+
+footer p {
+  margin: 6px 0;
+}
+
+footer a {
+  color: var(--color-button);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color var(--transition);
+}
+
+footer a:hover,
+footer a:focus {
+  color: var(--color-hover);
+  text-decoration: underline;
+}
+
+/* Footer responsivo */
+@media (max-width: 600px) {
+  footer {
+    font-size: 13px;
+    padding: 16px 20px;
+  }
 }

@@ -1,3 +1,22 @@
+:root {
+  --font-primary: Poppins, "Segoe UI", sans-serif;
+
+  --color-text: rgb(224, 224, 224);
+  --color-white: rgb(255, 255, 255);
+  --color-primary: rgb(0, 71, 171);
+  --color-secondary: rgb(0, 194, 255);
+  --color-header-start: rgb(10, 47, 102);
+  --color-header-end: rgb(0, 123, 255);
+  --color-accent: rgb(255, 167, 38);
+  --color-accent-hover: rgb(255, 183, 77);
+
+  --radius-small: 6px;
+  --radius-medium: 12px;
+  --radius-large: 15px;
+
+  --transition: 0.3s;
+}
+
 * {
   margin: 0px;
   padding: 0px;
@@ -147,81 +166,113 @@ section {
   object-fit: cover;
   display: block;
 }
+
 /* //dd */
 @media (min-width: 901px) {
   .placa {
-      max-width: 400px;
-      flex-shrink: 0;
+    max-width: 400px;
+    flex-shrink: 0;
   }
 }
 
 @media (max-width: 900px) {
   header {
-      flex-direction: column;
-      padding: 10px 20px;
-      align-items: center;
+    flex-direction: column;
+    padding: 10px 20px;
+    align-items: center;
   }
 
   .menu-toggle {
-      display: block;
+    display: block;
   }
 
   .logo {
-      margin-right: 0px;
-      margin-bottom: 12px;
-      max-width: 90px;
+    margin-right: 0px;
+    margin-bottom: 12px;
+    max-width: 90px;
   }
 
   .nav {
-      position: absolute;
-      top: 60px;
-      left: 0px;
-      width: 100%;
-      background: rgb(10, 47, 102);
-      flex-direction: column;
-      align-items: center;
-      padding: 20px 0px;
-      display: none;
+    position: absolute;
+    top: 60px;
+    left: 0px;
+    width: 100%;
+    background: rgb(10, 47, 102);
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0px;
+    display: none;
   }
 
   .nav.active {
-      display: flex;
+    display: flex;
   }
 
   .nav ul {
-      flex-direction: column;
-      gap: 20px;
+    flex-direction: column;
+    gap: 20px;
   }
 
   section {
-      flex-direction: column;
-      align-items: center;
-      gap: 32px;
-      padding: 120px 10px 40px;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    padding: 120px 10px 40px;
   }
 
   .conteiner {
-      align-items: center;
-      text-align: center;
-      max-width: 100%;
-      padding: 24px;
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+    padding: 24px;
   }
 
   .placa {
-      max-width: 100%;
-      width: 100%;
+    max-width: 100%;
+    width: 100%;
   }
 
   .placa img {
-      max-width: 100%;
-      width: 90%;
-      height: auto;
-      margin:0px auto;
-  
-    }
+    max-width: 100%;
+    width: 90%;
+    height: auto;
+    margin: 0px auto;
+  }
 }
+
 nav ul li a.active {
-  color: #FFD700; /* por exemplo, amarelo */
+  color: #FFD700; 
   font-weight: bold;
   border-bottom: 2px solid #FFD700;
+}
+
+/* Footer Styles */
+footer {
+  background: linear-gradient(90deg, rgb(10, 47, 102), rgb(0, 123, 255));
+  padding: 20px 40px;
+  text-align: center;
+  color: var(--color-white);
+  font-size: 0.9em;
+  border-top: 2px solid var(--color-accent);
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 40px;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+footer a {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color var(--transition);
+}
+
+footer a:hover {
+  color: var(--color-accent-hover);
+  text-decoration: underline;
 }

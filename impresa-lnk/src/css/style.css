@@ -1,3 +1,33 @@
+:root {
+  --font-primary: 'Poppins', sans-serif;
+
+  /* / Cores principais / */
+  --color-background: linear-gradient(135deg, #0047AB, #00C2FF);
+  --color-text: #e0e0e0;
+  --color-header-bg: linear-gradient(90deg, #0a2f66, #007bff);
+  --color-logo-border: #ffffff;
+  --color-nav-link: #ffffff;
+  --color-nav-hover: #FFB74D;
+  --color-button-border: #FFA726;
+  --color-button-hover: #FFA726;
+  --color-container-bg: #FFA726;
+  --color-container-text: #fff;
+  --color-container-subtext: #a9d6e5;
+  --color-circle-bg: #f7f6f6;
+  --color-nav-bg-mobile: #0a2f66;
+
+  /* / Dimensões */ 
+  --border-radius: 16px;
+  --container-padding: 40px;
+  --gap-large: 60px;
+  --gap-medium: 32px;
+  --gap-small: 20px;
+
+  --circle-size-desktop: 300px;
+  --circle-size-mobile: 180px;
+
+  --shadow: 0 6px 18px rgba(0,0,0,0.10);
+}
 * {
   margin: 0;
   padding: 0;
@@ -133,7 +163,6 @@ section {
   margin-bottom: 16px;
 }
 
-
 .circulo-esquerdo,
 .circulo-direito {
   width: 300px;
@@ -152,7 +181,6 @@ section {
   position: absolute;
   top: 160px;
   left: 40px;
-  
 }
 
 .circulo-direito {
@@ -167,6 +195,25 @@ section {
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
+}
+
+/* FOOTER */
+footer {
+  width: 100%;
+  padding: 20px 40px;
+  background: linear-gradient(90deg, #0a2f66, #007bff);
+  color: #e0e0e0;
+  text-align: center;
+  font-size: 0.9em;
+  position: relative;
+  bottom: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 -3px 6px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+footer p {
+  margin: 0;
 }
 
 /* RESPONSIVO */
@@ -212,7 +259,6 @@ section {
     text-align: center;
     align-items: center;
     border-radius: 12px;
-    
   }
 
   .circulo-esquerdo,
@@ -227,13 +273,10 @@ section {
 
   .circulo-esquerdo,
   .circulo-direito {
-    
     top: auto;
     left: auto;
     bottom: auto;
     right: auto;
-  
-    
   }
 
   .circulo-esquerdo img,
@@ -242,6 +285,11 @@ section {
     height: 100%;
     object-fit:  cover;
     border-radius: 50%;
+  }
+
+  footer {
+    padding: 16px 20px;
+    font-size: 0.85em;
   }
 }
 
@@ -263,6 +311,7 @@ section {
     line-height: 1.5;
   }
 }
+
 nav ul li a.active {
   color: #FFD700; 
   font-weight: bold;

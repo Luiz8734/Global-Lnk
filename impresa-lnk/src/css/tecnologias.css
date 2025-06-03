@@ -1,3 +1,56 @@
+:root {
+  /* Fontes */
+  --font-primary: 'Poppins', sans-serif;
+
+  /* Cores  */
+  --color-bg-gradient: linear-gradient(135deg, #0047AB, #00C2FF);
+  --color-text: #e0e0e0;
+  --color-header-bg-gradient: linear-gradient(90deg, #0a2f66, #007bff);
+  --color-header-text: #ffffff;
+  --color-border-white: #ffffff;
+  --color-hover-link: #FFB74D;
+  --color-container-bg: #FFA726;
+  --color-container-bg-overlay: rgba(10, 47, 102, 0.25);
+  --color-container-subtitle: #a9d6e5;
+
+  /* Tamanhos e espaçamentos */
+  --header-padding-desktop: 10px 80px;
+  --header-padding-mobile: 10px 20px;
+  --logo-max-width-desktop: 130px;
+  --logo-max-width-mobile: 90px;
+  --logo-margin-right-desktop: 40px;
+  --logo-margin-right-mobile: 16px;
+  --nav-gap: 40px;
+  --section-padding-desktop: 150px 40px 60px;
+  --section-padding-mobile: 120px 10px 40px;
+  --container-max-width-desktop: 800px;
+  --container-padding-desktop: 60px 20px;
+  --container-padding-mobile: 40px 10px;
+  --container-border-radius: 24px;
+  --container-gap: 25px;
+
+  /*  Imagens */
+  --image-max-width: 900px;
+  --image-border-radius: 50px;
+  --image-border: 2px solid var(--color-border-white);
+
+  /* Imagens posicionadas*/
+  --pos-img-width-large: 300px;
+  --pos-img-width-small: 250px;
+  --pos-img-height-large: 300px;
+  --pos-img-border-radius: 10px;
+  --pos-img-border: 2px solid var(--color-border-white);
+
+  /* Botão */
+  --btn-border: 2px solid #FFA726;
+  --btn-padding: 10px;
+  --btn-border-radius: 15px;
+  --btn-hover-bg: #FFA726;
+  --btn-hover-color: white;
+
+  /* Outros */ 
+  --gap-small: 20px;
+}
 * {
   margin: 0;
   padding: 0;

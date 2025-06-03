@@ -1,3 +1,33 @@
+:root {
+  --font-primary: 'Poppins', sans-serif;
+
+  /* / Cores principais / */
+  --color-background: linear-gradient(135deg, #0047AB, #00C2FF);
+  --color-text: #e0e0e0;
+  --color-header-bg: linear-gradient(90deg, #0a2f66, #007bff);
+  --color-logo-border: #ffffff;
+  --color-nav-link: #ffffff;
+  --color-nav-hover: #FFB74D;
+  --color-button-border: #FFA726;
+  --color-button-hover: #FFA726;
+  --color-container-bg: #FFA726;
+  --color-container-text: #fff;
+  --color-container-subtext: #a9d6e5;
+  --color-circle-bg: #f7f6f6;
+  --color-nav-bg-mobile: #0a2f66;
+
+  /* / Dimensões */ 
+  --border-radius: 16px;
+  --container-padding: 40px;
+  --gap-large: 60px;
+  --gap-medium: 32px;
+  --gap-small: 20px;
+
+  --circle-size-desktop: 300px;
+  --circle-size-mobile: 180px;
+
+  --shadow: 0 6px 18px rgba(0,0,0,0.10);
+}
 * {
   margin: 0;
   padding: 0;

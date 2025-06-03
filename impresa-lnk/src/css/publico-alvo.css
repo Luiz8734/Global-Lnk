@@ -1,3 +1,28 @@
+:root {
+  --font-primary: 'Poppins', 'Segoe UI', sans-serif;
+
+  /* /* Cores principais / */
+  --color-bg-start: rgb(0, 71, 171);
+  --color-bg-end: rgb(0, 194, 255);
+  --color-text: rgb(224, 224, 224);
+  --color-white: #ffffff;
+  --color-hover: #FFB74D;
+  --color-button: #FFA726;
+  --color-header-start: rgb(10, 47, 102);
+  --color-header-end: rgb(0, 123, 255);
+  --color-box-bg: #FFA726;
+  --color-box-shadow: rgba(0, 0, 0, 0.10);
+  --color-box-shadow-light: rgba(255, 253, 253, 0.08);
+  --color-nav-bg: #0a2f66;
+
+  /* / Bordas e outros */ 
+  --border-radius-large: 50px;
+  --border-radius-medium: 16px;
+  --border-radius-small: 12px;
+  --border-color: #ffffff;
+
+  --transition: 0.3s ease;
+}
 * {
   margin: 0;
   padding: 0;

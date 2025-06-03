@@ -1,3 +1,21 @@
+:root {
+  --font-primary: Poppins, "Segoe UI", sans-serif;
+
+  --color-text: rgb(224, 224, 224);
+  --color-white: rgb(255, 255, 255);
+  --color-primary: rgb(0, 71, 171);
+  --color-secondary: rgb(0, 194, 255);
+  --color-header-start: rgb(10, 47, 102);
+  --color-header-end: rgb(0, 123, 255);
+  --color-accent: rgb(255, 167, 38);
+  --color-accent-hover: rgb(255, 183, 77);
+
+  --radius-small: 6px;
+  --radius-medium: 12px;
+  --radius-large: 15px;
+
+  --transition: 0.3s;
+}
 * {
   margin: 0px;
   padding: 0px;
